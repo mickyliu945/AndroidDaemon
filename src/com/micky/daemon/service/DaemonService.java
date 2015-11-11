@@ -31,9 +31,8 @@ public class DaemonService extends Service {
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		Log.d(TAG, "onStartCommand");
 		
-		//÷ÿ∆ÙMsgService
 		startService(new Intent(this, MsgService.class));
-		new Thread(new OutputRunnable()).start();
+//		new Thread(new OutputRunnable()).start();
 		return super.onStartCommand(intent, START_STICKY, startId);
 	}
 
